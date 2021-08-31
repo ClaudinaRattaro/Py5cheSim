@@ -1,15 +1,16 @@
-# UE Module: classes related to the terminal
-
+""" This module contains the UE, Packet Flow, Packet, PcktQueue, Bearer and RadioLink clases.
+This clases are oriented to describe UE traffic profile, and UE relative concepts
+"""
 import os
 import sys
 import random
-import simpy #from SimPy.Simulation import * (Simpy2.2)
-from cell import Format
+import simpy
 from collections import deque
 
 # UE class: terminal description
 
 class UE():
+	""" This class is used to model UE behabiour and relative properties """
 	def __init__(self, i,ue_sinr0,p,npM):
 		self.id = i
 		self.state = 'RRC-IDLE'
@@ -17,8 +18,6 @@ class UE():
 		self.bearers = []
 		self.radioLinks = RadioLink(1,ue_sinr0,self.id)
 		self.TBid = 1
-		# self.accessRetry = 0
-		# self.accessFailMax = 2
 		self.pendingPckts = {}
 		self.prbs = p
 		self.resUse = 0
@@ -31,11 +30,9 @@ class UE():
 		self.lastDen = 0.001 # PF Scheduler
 		self.num = 0 # PF Scheduler
 		self.BWPs = npM
-		self.TXedTB = 0
+		self.TXedTB = 1
 		self.lostTB = 0
 		self.symb = 0
-
-#------------------------------------------------ lists mng
 
 	def addPacketFlow(self,pckFl):
 		self.packetFlows.append(pckFl)
@@ -43,51 +40,28 @@ class UE():
 	def addBearer(self,br):
 		self.bearers.append(br)
 
-#-----------------------------------------------
-
 	def receivePckt(self,env,c): # PEM -------------------------------------------
-
+		"""This method takes packets on the application buffers and leave them on the bearer buffers. This is a PEM method."""
 		while True:
-
 			if len(self.packetFlows[0].appBuff.pckts)>0:
 				if self.state == 'RRC-IDLE': # Not connected
-					if c.controlAccess(self): # cell can give resources
-						self.connect(c)
-						nextPackTime = c.tUdQueue
-						yield env.timeout(nextPackTime) #yield hold, self, nextPackTime (Simpy2.2)
-						if nextPackTime > c.inactTimer:
-							self.releaseConnection(c)
-					else: # cell can't give resources
-						self.connRej()
-						yield env.timeout(10) #yield hold, self, 10  (Simpy2.2) # Should be 10, for RACH
-				else: # Already connecter user
-					if c.congestionControl(self):
-						self.queueDataPckt(c)
-						nextPackTime = c.tUdQueue
-						yield env.timeout(nextPackTime) #yield hold, self, nextPackTime (Simpy2.2)
-						if nextPackTime > c.inactTimer:
-							self.releaseConnection(c)
-					else:
-						self.connRej()
+					self.connect(c)
+					nextPackTime = c.tUdQueue
+					yield env.timeout(nextPackTime)
+					if nextPackTime > c.inactTimer:
 						self.releaseConnection(c)
-						nextPackTime = c.tUdQueue
-						yield env.timeout(nextPackTime) #yield hold, self, nextPackTime (Simpy2.2)
+				else: # Already connecter user
+					self.queueDataPckt(c)
+					nextPackTime = c.tUdQueue
+					yield env.timeout(nextPackTime)
+					if nextPackTime > c.inactTimer:
+						self.releaseConnection(c)
 			else:
 				nextPackTime = c.tUdQueue
-				yield env.timeout(nextPackTime) #yield hold, self, nextPackTime (Simpy2.2)
-
-	def connRej(self):
-		print (str(self.id)+ ' Connection rejected')
-		pD = self.packetFlows[0].appBuff.removePckt()
-		if (now()-pD.tIn) > 30:
-			pcktN = pD.secNum
-			print (str(self.id)+'packet '+str(pcktN)+' lost .....'+str(pD.twait))
-			self.packetFlows[0].lostPackets = self.packetFlows[0].lostPackets + 1
-		else:
-			self.packetFlows[0].appBuff.insertPcktLeft(pD)
-
+				yield env.timeout(nextPackTime)
 
 	def connect(self,cl):
+		"""This method creates bearers and bearers buffers."""
 		bD = Bearer(1,9,self.packetFlows[0].type)
 		self.addBearer(bD)
 		self.queueDataPckt(cl)
@@ -101,6 +75,7 @@ class UE():
 
 
 	def queueDataPckt(self,cell):
+		"""This method queues the packets taken from the application buffer in the bearer buffers."""
 		pD = self.packetFlows[0].appBuff.removePckt()
 		buffSizeAllUEs = 0
 		buffSizeThisUE = 0
@@ -135,13 +110,11 @@ class UE():
 	def releaseConnection(self,cl):
 		self.state = 'RRC-IDLE'
 		self.bearers = []
-		# Cleaning actions?
 
 # ------------------------------------------------
-
 # PacketFlow class: PacketFlow description
-
 class PacketFlow():
+	""" This class is used to describe UE traffic profile for the simulation."""
 	def __init__(self,i,pckSize,pckArrRate,u,tp,slc):
 		self.id = i
 		self.tMed = 0
@@ -168,10 +141,10 @@ class PacketFlow():
 		qosFlowId = q
 
 	def queueAppPckt(self,env,tSim): # --- PEM -----
-		#i = 1
+		"""This method creates packets according to the packet flow traffic profile and stores them in the application buffer. """
 		ueN = int(self.ue[2:]) # number of UEs in simulation
 		self.tStart = (random.expovariate(1.0))
-		yield env.timeout(self.tStart) 	#yield hold, self, self.tStart (Simpy2.2)  # each UE start transmission after tStart
+		yield env.timeout(self.tStart) 	 # each UE start transmission after tStart
 		while env.now<(tSim*0.83):
 			self.sentPackets = self.sentPackets + 1
 			size = self.getPsize()
@@ -180,7 +153,7 @@ class PacketFlow():
 			pD.tIn = env.now
 			self.appBuff.insertPckt(pD)
 			nextPackTime = self.getParrRate()
-			yield env.timeout(nextPackTime) #yield hold, self, nextPackTime (Simpy2.2)
+			yield env.timeout(nextPackTime)
 
 	def getPsize(self):
 		pSize = random.paretovariate(1.2)*(self.packetSize*(0.2/1.2))
@@ -197,7 +170,7 @@ class PacketFlow():
 		return pArrRate
 
 	def setMeassures(self,tsim):
-		#print Format.CBLUE+'Lost packets: '+str(self.lostPackets),'Sent packets: '+str(self.sentPackets) + Format.CEND
+		"""This method calculates average PLR and throughput for the simulation."""
 		self.meassuredKPI['PacketLossRate'] = float(100*self.lostPackets)/self.sentPackets
 		if tsim>1000:
 			self.meassuredKPI['Throughput'] = (float(self.rcvdBytes)*8000)/(0.83*tsim*1024*1024)
@@ -205,6 +178,7 @@ class PacketFlow():
 			self.meassuredKPI['Throughput'] = 0
 
 class Packet:
+	"""This class is used to model packets properties and behabiour."""
 	def __init__(self,sn,s,qfi,u):
 		self.secNum = sn
 		self.size = s
@@ -216,6 +190,7 @@ class Packet:
 		print (Format.CYELLOW + Format.CBOLD + self.ue+ '+packet '+str(self.secNum)+' arrives at t ='+str(now()) + Format.CEND)
 
 class Bearer:
+	"""This class is used to model Bearers properties and behabiour."""
 	def __init__(self,i,q,tp):
 		self.id = i
 		self.qci = q
@@ -223,60 +198,57 @@ class Bearer:
 		self.buffer = PcktQueue()
 
 class PcktQueue:
-    def __init__(self):
-        self.pckts = deque([])
+	"""This class is used to model application and bearer buffers."""
+	def __init__(self):
+		self.pckts = deque([])
 
-    def insertPckt(self,p):
-        self.pckts.append(p)
+	def insertPckt(self,p):
+		self.pckts.append(p)
 
-    def insertPcktLeft(self,p):
-        self.pckts.appendleft(p)
+	def insertPcktLeft(self,p):
+		self.pckts.appendleft(p)
 
-    def removePckt(self):
-        if len(self.pckts)>0:
-            return self.pckts.popleft()
+	def removePckt(self):
+		if len(self.pckts)>0:
+			return self.pckts.popleft()
 
 class RadioLink():
+	"""This class is used to model radio link properties and behabiour."""
 	def __init__(self,i,lq_0,u):
 		self.id = i
 		state = 'ON'
 		self.linkQuality = lq_0
 		self.ue = u
-		self.lqAv = 0
 		self.totCount = 0
 		self.maxVar = 0.1
 
 	def updateLQ(self,env,udIntrv,tSim,fl,u,r):
-		if fl: # load SINR from lena DlRsrpSinrStats.txt ststs file
-			sizeFile = int(u*float(tSim)/udIntrv)
-			with open(r+'DlRsrpSinrStats.txt') as s:
-				lines = s.readlines()
-				line_i = 1
-				time = 0
-				while time*1000<tSim:
-					lqMed = 0
-					count = 0
-					short_time = 0
-					ref_time = time
-					while short_time*1000<udIntrv and line_i<len(lines):
-						columns = lines[line_i].split("\t",7)
-						time = float(columns[0])
-						imsi = columns[2]
-						line_i = line_i + 1
-						short_time = time - ref_time
-						if imsi==self.ue[2:]:
-							lqMed = lqMed + float(columns[5])
-							self.lqAv = self.lqAv + float(columns[5])
-							count = count + 1
-							self.totCount = self.totCount + 1
-					if count>0:
-						self.linkQuality = float(lqMed)/(count)
-					yield env.timeout(udIntrv) #yield hold, self, udIntrv (Simpy2.2)
+		"""This method updates UE link quality in terms of SINR during the simulation. This is a PEM method.
 
-		else: # vary SINR with normal distribution
-			while env.now<(tSim*0.83): #while now()<(tSim*0.83): (Simpy2.2)
-				yield env.timeout(udIntrv) #yield hold, self, udIntrv (Simpy2.2)
+		During the simulation it is assumed that UE SINR varies following a normal distribution with mean value equal to initial SINR value, and a small variance."""
+
+		while env.now<(tSim*0.83):
+			yield env.timeout(udIntrv)
+			deltaSINR = random.normalvariate(0, self.maxVar)
+			while deltaSINR > self.maxVar or deltaSINR<(0-self.maxVar):
 				deltaSINR = random.normalvariate(0, self.maxVar)
-				while deltaSINR > self.maxVar or deltaSINR<(0-self.maxVar):
-					deltaSINR = random.normalvariate(0, self.maxVar)
-				self.linkQuality = self.linkQuality + deltaSINR
+			self.linkQuality = self.linkQuality + deltaSINR
+
+class Format:
+    CEND      = '\33[0m'
+    CBOLD     = '\33[1m'
+    CITALIC   = '\33[3m'
+    CURL      = '\33[4m'
+    CBLINK    = '\33[5m'
+    CBLINK2   = '\33[6m'
+    CSELECTED = '\33[7m'
+    CBLACK  = '\33[30m'
+    CRED    = '\33[31m'
+    CGREEN  = '\33[32m'
+    CYELLOW = '\33[33m'
+    CBLUE   = '\33[34m'
+    CVIOLET = '\33[35m'
+    CBEIGE  = '\33[36m'
+    CWHITE  = '\33[37m'
+    CGREENBG  = '\33[42m'
+    CBLUEBG   = '\33[44m'
