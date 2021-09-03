@@ -10,13 +10,13 @@ The main network model abstractions are contained in the simulator Core, so ther
 The tool used to implement Discrete Event Simulation was SimPy and code documentation was made using pydoctor.
 
 Py5cheSim is build on the next modules:
-• UE.py: UE parameters and traffic generation.
-• Cell.py: Cell configuration and statistics management.
-• Slice.py: Slice configuration.
-• IntraSliceSch.py: Base intra slice scheduler implementation.
-• InterSliceSch.py: Base inter slice scheduler implementation.
-• Scheds Intra.py: Other intra slice schedulers implementation.
-• Scheds Inter.py: Other inter slice schedulers implementation.
-• simulation.py: Is the simulation script. It configures and runs a simulation.
-• Results.py: Provides auxiliary methods to present simulation results, and configure traffic profiles.
+• UE.py: UE parameters and traffic generation.<br/>
+• Cell.py: Cell configuration and statistics management.<br/>
+• Slice.py: Slice configuration.<br/>
+• IntraSliceSch.py: Base intra slice scheduler implementation.<br/>
+• InterSliceSch.py: Base inter slice scheduler implementation.<br/>
+• Scheds Intra.py: Other intra slice schedulers implementation.<br/>
+• Scheds Inter.py: Other inter slice schedulers implementation.<br/>
+• simulation.py: Is the simulation script. It configures and runs a simulation.<br/>
+• Results.py: Provides auxiliary methods to present simulation results, and configure traffic profiles.<br/>
 
