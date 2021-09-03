@@ -20,3 +20,5 @@ Py5cheSim is build on the next modules:<br/>
 • simulation.py: Is the simulation script. It configures and runs a simulation.<br/>
 • Results.py: Provides auxiliary methods to present simulation results, and configure traffic profiles.<br/>
 
+Py5cheSim 1.0 is the result of the Master Thesis of Gabriela Pereyra (Facultad de Ingeniería, UdelaR).
+
