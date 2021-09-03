@@ -9,7 +9,7 @@ The main network model abstractions are contained in the simulator Core, so ther
 
 The tool used to implement Discrete Event Simulation was SimPy and code documentation was made using pydoctor.
 
-Py5cheSim is build on the next modules:
+Py5cheSim is build on the next modules:<br/>
 • UE.py: UE parameters and traffic generation.<br/>
 • Cell.py: Cell configuration and statistics management.<br/>
 • Slice.py: Slice configuration.<br/>
