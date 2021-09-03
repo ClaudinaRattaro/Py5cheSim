@@ -22,3 +22,5 @@ Py5cheSim is build on the next modules:<br/>
 
 Py5cheSim 1.0 is the result of the Master Thesis of Gabriela Pereyra (Facultad de Ingeniería, UdelaR).
 
+Code Documentation: https://htmlpreview.github.io/?https://github.com/ClaudinaRattaro/Py5cheSim/blob/main/doc/Py5cheSim.html
+
