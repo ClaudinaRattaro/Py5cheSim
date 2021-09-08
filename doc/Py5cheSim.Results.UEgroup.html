@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.Results.UEgroup : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.Results.html">Results</a></code>.<code><a href="Py5cheSim.Results.UEgroup.html">UEgroup</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">UEgroup</span>:</code></p>
+        <p><a href="classIndex.html#Py5cheSim.Results.UEgroup">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This class is used to describe traffic profile and requirements of group of UE which the simulation will run for. It is assumed that all UEs shares the same traffic profile and service requirements, and will be served by the same slice.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id14">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#num_usersDL">num_usersDL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#num_usersUL">num_usersUL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#p_sizeDL">p_sizeDL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#p_sizeUL">p_sizeUL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#p_arr_rateDL">p_arr_rateDL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#p_arr_rateUL">p_arr_rateUL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sinr_0DL">sinr_0DL</a></code></td>
+    <td><span>Initial sinr value for DL</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sinr_0UL">sinr_0UL</a></code></td>
+    <td><span>Initial sinr value for UL</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sch">sch</a></code></td>
+    <td><span>Intra Slice scheduler algorithm</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#label">label</a></code></td>
+    <td><span>Slice label</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#req">req</a></code></td>
+    <td><span>Dictionary with services requirements</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#mmMd">mmMd</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#lyrs">lyrs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#gr">gr</a></code></td>
+    <td><span>Inter Slice scheduler time granularity</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#mgr">mgr</a></code></td>
+    <td><span>Meassurement time granularity</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#schIn">schIn</a></code></td>
+    <td><span>Inter Slice scheduler algorithm</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#usersDL">usersDL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#flowsDL">flowsDL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#usersUL">usersUL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#flowsUL">flowsUL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setReq">setReq</a></code></td>
+    <td><span>This method sets the service requirements depending on the UE group traffic profile and required delay</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setInitialSINR">setInitialSINR</a></code></td>
+    <td><span>This method sets the initial SINR value</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#initializeUEs">initializeUEs</a></code></td>
+    <td><span>This method creates the UEs with its traffic flows, and initializes the asociated PEM methods</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#activateSliceScheds">activateSliceScheds</a></code></td>
+    <td><span>This method activates PEM methods from the intra Slice schedulers</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#printSliceResults">printSliceResults</a></code></td>
+    <td><span>This method prints main simulation results on the terminal, gets the considered kpi from the statistic files, and builds kpi plots</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Py5cheSim.Results.UEgroup.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, nuDL, nuUL, pszDL, pszUL, parrDL, parrUL, label, dly, avlty, schedulerType, mmMd, lyrs, cell, t_sim, measInterv, env, sinr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.num_usersDL">
+    
+  </a>
+  <a name="num_usersDL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">num_usersDL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.num_usersUL">
+    
+  </a>
+  <a name="num_usersUL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">num_usersUL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.p_sizeDL">
+    
+  </a>
+  <a name="p_sizeDL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">p_sizeDL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.p_sizeUL">
+    
+  </a>
+  <a name="p_sizeUL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">p_sizeUL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.p_arr_rateDL">
+    
+  </a>
+  <a name="p_arr_rateDL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">p_arr_rateDL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.p_arr_rateUL">
+    
+  </a>
+  <a name="p_arr_rateUL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">p_arr_rateUL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.sinr_0DL">
+    
+  </a>
+  <a name="sinr_0DL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sinr_0DL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Initial sinr value for DL</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.sinr_0UL">
+    
+  </a>
+  <a name="sinr_0UL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sinr_0UL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Initial sinr value for UL</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.sch">
+    
+  </a>
+  <a name="sch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sch</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Intra Slice scheduler algorithm</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.label">
+    
+  </a>
+  <a name="label">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">label</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Slice label</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.req">
+    
+  </a>
+  <a name="req">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">req</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Dictionary with services requirements</p></div> (type: <code>dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.mmMd">
+    
+  </a>
+  <a name="mmMd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mmMd</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.lyrs">
+    
+  </a>
+  <a name="lyrs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">lyrs</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.gr">
+    
+  </a>
+  <a name="gr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">gr</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Inter Slice scheduler time granularity</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.mgr">
+    
+  </a>
+  <a name="mgr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mgr</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Meassurement time granularity</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.schIn">
+    
+  </a>
+  <a name="schIn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">schIn</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Inter Slice scheduler algorithm</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.usersDL">
+    
+  </a>
+  <a name="usersDL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">usersDL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.flowsDL">
+    
+  </a>
+  <a name="flowsDL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">flowsDL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.usersUL">
+    
+  </a>
+  <a name="usersUL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">usersUL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Results.UEgroup.flowsUL">
+    
+  </a>
+  <a name="flowsUL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">flowsUL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Results.UEgroup.setReq">
+    
+  </a>
+  <a name="setReq">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setReq</span>(self, delay, avl):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method sets the service requirements depending on the UE group traffic profile and required delay</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Results.UEgroup.setInitialSINR">
+    
+  </a>
+  <a name="setInitialSINR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setInitialSINR</span>(self, sinr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method sets the initial SINR value</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Results.UEgroup.initializeUEs">
+    
+  </a>
+  <a name="initializeUEs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">initializeUEs</span>(self, dir, num_users, p_size, p_arr_rate, sinr_0, cell, t_sim, measInterv, env):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method creates the UEs with its traffic flows, and initializes the asociated PEM methods</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Results.UEgroup.activateSliceScheds">
+    
+  </a>
+  <a name="activateSliceScheds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">activateSliceScheds</span>(self, interSliceSche, env):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method activates PEM methods from the intra Slice schedulers</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Results.UEgroup.printSliceResults">
+    
+  </a>
+  <a name="printSliceResults">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">printSliceResults</span>(self, interSliceSche, t_sim, bw, measInterv):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method prints main simulation results on the terminal, gets the considered kpi from the statistic files, and builds kpi plots</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

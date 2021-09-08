@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.UE.PacketFlow : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.UE.html">UE</a></code>.<code><a href="Py5cheSim.UE.PacketFlow.html">PacketFlow</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">PacketFlow</span>:</code></p>
+        <p><a href="classIndex.html#Py5cheSim.UE.PacketFlow">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This class is used to describe UE traffic profile for the simulation.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id26">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#id">id</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tMed">tMed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sMed">sMed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#type">type</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sliceName">sliceName</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pckArrivalRate">pckArrivalRate</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#qosFlowId">qosFlowId</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#packetSize">packetSize</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#ue">ue</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sMax">sMax</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tMax">tMax</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tStart">tStart</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#appBuff">appBuff</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#lostPackets">lostPackets</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sentPackets">sentPackets</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#rcvdBytes">rcvdBytes</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pId">pId</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#header">header</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#meassuredKPI">meassuredKPI</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setQosFId">setQosFId</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#queueAppPckt">queueAppPckt</a></code></td>
+    <td><span>This method creates packets according to the packet flow traffic profile and stores them in the application buffer.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getPsize">getPsize</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getParrRate">getParrRate</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setMeassures">setMeassures</a></code></td>
+    <td><span>This method calculates average PLR and throughput for the simulation.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Py5cheSim.UE.PacketFlow.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, i, pckSize, pckArrRate, u, tp, slc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.id">
+    
+  </a>
+  <a name="id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">id</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.tMed">
+    
+  </a>
+  <a name="tMed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tMed</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.sMed">
+    
+  </a>
+  <a name="sMed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sMed</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.type">
+    
+  </a>
+  <a name="type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">type</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.sliceName">
+    
+  </a>
+  <a name="sliceName">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sliceName</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.pckArrivalRate">
+    
+  </a>
+  <a name="pckArrivalRate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pckArrivalRate</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.qosFlowId">
+    
+  </a>
+  <a name="qosFlowId">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">qosFlowId</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.packetSize">
+    
+  </a>
+  <a name="packetSize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">packetSize</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.ue">
+    
+  </a>
+  <a name="ue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">ue</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.sMax">
+    
+  </a>
+  <a name="sMax">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sMax</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.tMax">
+    
+  </a>
+  <a name="tMax">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tMax</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.tStart">
+    
+  </a>
+  <a name="tStart">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tStart</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.appBuff">
+    
+  </a>
+  <a name="appBuff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">appBuff</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.lostPackets">
+    
+  </a>
+  <a name="lostPackets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">lostPackets</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.sentPackets">
+    
+  </a>
+  <a name="sentPackets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sentPackets</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.rcvdBytes">
+    
+  </a>
+  <a name="rcvdBytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">rcvdBytes</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.pId">
+    
+  </a>
+  <a name="pId">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pId</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.header">
+    
+  </a>
+  <a name="header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">header</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.PacketFlow.meassuredKPI">
+    
+  </a>
+  <a name="meassuredKPI">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">meassuredKPI</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>dict[str, int]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.PacketFlow.setQosFId">
+    
+  </a>
+  <a name="setQosFId">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setQosFId</span>(self, q):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.PacketFlow.queueAppPckt">
+    
+  </a>
+  <a name="queueAppPckt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">queueAppPckt</span>(self, env, tSim):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method creates packets according to the packet flow traffic profile and stores them in the application buffer.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.PacketFlow.getPsize">
+    
+  </a>
+  <a name="getPsize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getPsize</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.PacketFlow.getParrRate">
+    
+  </a>
+  <a name="getParrRate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getParrRate</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.PacketFlow.setMeassures">
+    
+  </a>
+  <a name="setMeassures">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setMeassures</span>(self, tsim):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method calculates average PLR and throughput for the simulation.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.UE.UE : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.UE.html">UE</a></code>.<code><a href="Py5cheSim.UE.UE.html">UE</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">UE</span>:</code></p>
+        <p><a href="classIndex.html#Py5cheSim.UE.UE">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This class is used to model UE behabiour and relative properties</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id25">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#id">id</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#state">state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#packetFlows">packetFlows</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#bearers">bearers</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#radioLinks">radioLinks</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#TBid">TBid</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pendingPckts">pendingPckts</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#prbs">prbs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#resUse">resUse</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pendingTB">pendingTB</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#bler">bler</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tbsz">tbsz</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#MCS">MCS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pfFactor">pfFactor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pastTbsz">pastTbsz</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#lastDen">lastDen</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#num">num</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#BWPs">BWPs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#TXedTB">TXedTB</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#lostTB">lostTB</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#symb">symb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addPacketFlow">addPacketFlow</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addBearer">addBearer</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#receivePckt">receivePckt</a></code></td>
+    <td><span>This method takes packets on the application buffers and leave them on the bearer buffers. This is a PEM method.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#connect">connect</a></code></td>
+    <td><span>This method creates bearers and bearers buffers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#queueDataPckt">queueDataPckt</a></code></td>
+    <td><span>This method queues the packets taken from the application buffer in the bearer buffers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#releaseConnection">releaseConnection</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Py5cheSim.UE.UE.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, i, ue_sinr0, p, npM):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.id">
+    
+  </a>
+  <a name="id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">id</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.state">
+    
+  </a>
+  <a name="state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">state</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.packetFlows">
+    
+  </a>
+  <a name="packetFlows">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">packetFlows</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>list</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.bearers">
+    
+  </a>
+  <a name="bearers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">bearers</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>list</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.radioLinks">
+    
+  </a>
+  <a name="radioLinks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">radioLinks</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.TBid">
+    
+  </a>
+  <a name="TBid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">TBid</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.pendingPckts">
+    
+  </a>
+  <a name="pendingPckts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pendingPckts</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.prbs">
+    
+  </a>
+  <a name="prbs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">prbs</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.resUse">
+    
+  </a>
+  <a name="resUse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">resUse</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.pendingTB">
+    
+  </a>
+  <a name="pendingTB">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pendingTB</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>list</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.bler">
+    
+  </a>
+  <a name="bler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">bler</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.tbsz">
+    
+  </a>
+  <a name="tbsz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tbsz</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.MCS">
+    
+  </a>
+  <a name="MCS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MCS</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.pfFactor">
+    
+  </a>
+  <a name="pfFactor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pfFactor</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.pastTbsz">
+    
+  </a>
+  <a name="pastTbsz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pastTbsz</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.lastDen">
+    
+  </a>
+  <a name="lastDen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">lastDen</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>float</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.num">
+    
+  </a>
+  <a name="num">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">num</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.BWPs">
+    
+  </a>
+  <a name="BWPs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">BWPs</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.TXedTB">
+    
+  </a>
+  <a name="TXedTB">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">TXedTB</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.lostTB">
+    
+  </a>
+  <a name="lostTB">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">lostTB</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.UE.UE.symb">
+    
+  </a>
+  <a name="symb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">symb</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.UE.addPacketFlow">
+    
+  </a>
+  <a name="addPacketFlow">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addPacketFlow</span>(self, pckFl):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.UE.addBearer">
+    
+  </a>
+  <a name="addBearer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addBearer</span>(self, br):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.UE.receivePckt">
+    
+  </a>
+  <a name="receivePckt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">receivePckt</span>(self, env, c):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method takes packets on the application buffers and leave them on the bearer buffers. This is a PEM method.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.UE.connect">
+    
+  </a>
+  <a name="connect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">connect</span>(self, cl):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method creates bearers and bearers buffers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.UE.queueDataPckt">
+    
+  </a>
+  <a name="queueDataPckt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">queueDataPckt</span>(self, cell):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method queues the packets taken from the application buffer in the bearer buffers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.UE.UE.releaseConnection">
+    
+  </a>
+  <a name="releaseConnection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">releaseConnection</span>(self, cl):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

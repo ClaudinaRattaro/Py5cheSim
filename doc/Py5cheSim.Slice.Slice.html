@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.Slice.Slice : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.Slice.html">Slice</a></code>.<code><a href="Py5cheSim.Slice.Slice.html">Slice</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">Slice</span>:</code></p>
+        <p><a href="classIndex.html#Py5cheSim.Slice.Slice">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This class has Slice relative parameters and is used to implement the mapping between service requirements and slice configuration.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id23">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#reqDelay">reqDelay</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#reqThroughputDL">reqThroughputDL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#reqThroughputUL">reqThroughputUL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#reqAvailability">reqAvailability</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#reqDLconnections">reqDLconnections</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#reqULconnections">reqULconnections</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#band">band</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#PRBs">PRBs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#signLoad">signLoad</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#scs">scs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#ttiBms">ttiBms</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#robustMCS">robustMCS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#mimoMd">mimoMd</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#layers">layers</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tddSymb">tddSymb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#schType">schType</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#label">label</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tdd">tdd</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#dm">dm</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#rcvdBytes">rcvdBytes</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#metric">metric</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#schedulerDL">schedulerDL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#schedulerUL">schedulerUL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#createSliceSched">createSliceSched</a></code></td>
+    <td><span>This method initializes and returns slice UL or DL scheduler. Scheduler algorithm is selected according to the Slice attribute schType.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setInitialConfig">setInitialConfig</a></code></td>
+    <td><span>This method sets initial Slice configuration according to service requirements.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#numRefFactor">numRefFactor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#dly2scs">dly2scs</a></code></td>
+    <td><span>This method sets Slice numerology depending on delay requirements.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#updateConfig">updateConfig</a></code></td>
+    <td><span>This method updates Slice allocated PRBs.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Py5cheSim.Slice.Slice.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, dly, thDL, thUL, avl, cnxDL, cnxUL, ba, dm, mmd, ly, lbl, tdd, sch):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.reqDelay">
+    
+  </a>
+  <a name="reqDelay">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">reqDelay</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.reqThroughputDL">
+    
+  </a>
+  <a name="reqThroughputDL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">reqThroughputDL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.reqThroughputUL">
+    
+  </a>
+  <a name="reqThroughputUL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">reqThroughputUL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.reqAvailability">
+    
+  </a>
+  <a name="reqAvailability">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">reqAvailability</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.reqDLconnections">
+    
+  </a>
+  <a name="reqDLconnections">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">reqDLconnections</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.reqULconnections">
+    
+  </a>
+  <a name="reqULconnections">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">reqULconnections</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.band">
+    
+  </a>
+  <a name="band">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">band</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.PRBs">
+    
+  </a>
+  <a name="PRBs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">PRBs</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.signLoad">
+    
+  </a>
+  <a name="signLoad">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">signLoad</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>float</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.scs">
+    
+  </a>
+  <a name="scs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">scs</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.ttiBms">
+    
+  </a>
+  <a name="ttiBms">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">ttiBms</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.robustMCS">
+    
+  </a>
+  <a name="robustMCS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">robustMCS</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.mimoMd">
+    
+  </a>
+  <a name="mimoMd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mimoMd</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.layers">
+    
+  </a>
+  <a name="layers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">layers</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.tddSymb">
+    
+  </a>
+  <a name="tddSymb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tddSymb</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.schType">
+    
+  </a>
+  <a name="schType">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">schType</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.label">
+    
+  </a>
+  <a name="label">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">label</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.tdd">
+    
+  </a>
+  <a name="tdd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tdd</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.dm">
+    
+  </a>
+  <a name="dm">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">dm</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.rcvdBytes">
+    
+  </a>
+  <a name="rcvdBytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">rcvdBytes</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.metric">
+    
+  </a>
+  <a name="metric">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">metric</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.schedulerDL">
+    
+  </a>
+  <a name="schedulerDL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">schedulerDL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.schedulerUL">
+    
+  </a>
+  <a name="schedulerUL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">schedulerUL</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Slice.Slice.createSliceSched">
+    
+  </a>
+  <a name="createSliceSched">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">createSliceSched</span>(self, dir, tddSymb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method initializes and returns slice UL or DL scheduler. Scheduler algorithm is selected according to the Slice attribute schType.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Slice.Slice.setInitialConfig">
+    
+  </a>
+  <a name="setInitialConfig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setInitialConfig</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method sets initial Slice configuration according to service requirements.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Slice.Slice.numRefFactor">
+    
+  </a>
+  <a name="numRefFactor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">numRefFactor</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Slice.Slice.dly2scs">
+    
+  </a>
+  <a name="dly2scs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">dly2scs</span>(self, delay):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method sets Slice numerology depending on delay requirements.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Slice.Slice.updateConfig">
+    
+  </a>
+  <a name="updateConfig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">updateConfig</span>(self, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method updates Slice allocated PRBs.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

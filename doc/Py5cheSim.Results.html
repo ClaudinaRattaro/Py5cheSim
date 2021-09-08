@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.Results : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.Results.html">Results</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This module contains auxiliary simulation classes and methods along with results processing.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id13">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#initialSinrGenerator">initialSinrGenerator</a></code></td>
+    <td><span>Auxiliary method for SINR generation. This method is used to generate initial UE SINR. Later, during the simulation SINR will have small variations with time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="Py5cheSim.Results.UEgroup.html">UEgroup</a></code></td>
+    <td><span>This class is used to describe traffic profile and requirements of group of UE which the simulation will run for. It is assumed that all UEs shares the same traffic profile and service requirements, and will be served by the same slice.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#printResults">printResults</a></code></td>
+    <td><span>This method prints main simulation results on the terminal</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#getKPIs">getKPIs</a></code></td>
+    <td><span>This method gets the intra slice kpi from the statistic files</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#getKPIsInter">getKPIsInter</a></code></td>
+    <td><span>This method gets the inter Slice kpi from the statistic files</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#makeTimePlot">makeTimePlot</a></code></td>
+    <td><span>This method makes basic time plots. Labels deppend on which kpi is being plotted.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#makeIntraSlicePlot">makeIntraSlicePlot</a></code></td>
+    <td><span>This method makes and stores any Intra Slice plot</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#makeInterSlicePlot">makeInterSlicePlot</a></code></td>
+    <td><span>This method makes and stores any Inter Slice plot</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#makePlotsIntra">makePlotsIntra</a></code></td>
+    <td><span>This method makes all Intra Slice kpi plots</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#makePlotsInter">makePlotsInter</a></code></td>
+    <td><span>This method makes all Inter Slice kpi plots</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Py5cheSim.Results.initialSinrGenerator">
+    
+  </a>
+  <a name="initialSinrGenerator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">initialSinrGenerator</span>(n_ues, refValue):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>Auxiliary method for SINR generation. This method is used to generate initial UE SINR. Later, during the simulation SINR will have small variations with time.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.printResults">
+    
+  </a>
+  <a name="printResults">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">printResults</span>(dir, users, num_users, scheduler, t_sim, singleRunMode, fileSINR, sinr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method prints main simulation results on the terminal</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.getKPIs">
+    
+  </a>
+  <a name="getKPIs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getKPIs</span>(dir, stFile, users, num_users, sinr_0, measInterv, tSim):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method gets the intra slice kpi from the statistic files</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.getKPIsInter">
+    
+  </a>
+  <a name="getKPIsInter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getKPIsInter</span>(dir, stFile, slices, num_slices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method gets the inter Slice kpi from the statistic files</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.makeTimePlot">
+    
+  </a>
+  <a name="makeTimePlot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">makeTimePlot</span>(u, plotName, plotType, xAx, yAx):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method makes basic time plots. Labels deppend on which kpi is being plotted.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.makeIntraSlicePlot">
+    
+  </a>
+  <a name="makeIntraSlicePlot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">makeIntraSlicePlot</span>(plotName, plotType, xAx, yAx, slcLbl, bw, sch, gran):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method makes and stores any Intra Slice plot</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.makeInterSlicePlot">
+    
+  </a>
+  <a name="makeInterSlicePlot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">makeInterSlicePlot</span>(plotName, plotType, xAx, yAx, bw, sch, gran):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method makes and stores any Inter Slice plot</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.makePlotsIntra">
+    
+  </a>
+  <a name="makePlotsIntra">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">makePlotsIntra</span>(dir, times, sinr, mcs, rU, plr, th, slcLbl, bw, sch, gr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method makes all Intra Slice kpi plots</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Py5cheSim.Results.makePlotsInter">
+    
+  </a>
+  <a name="makePlotsInter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">makePlotsInter</span>(dir, times, res, plr, th, cnx, buf, met, bw, schIn, gr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method makes all Inter Slice kpi plots</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

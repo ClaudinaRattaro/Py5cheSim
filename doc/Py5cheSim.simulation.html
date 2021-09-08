@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.simulation : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.simulation.html">simulation</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This is the simulation script. Simulation, cell and traffic profile parameters can be set here.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id32">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#bw">bw</a></code></td>
+    <td><span>List containing each CC's bandwidth for the simulation.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#fr">fr</a></code></td>
+    <td><span>String with frequency range (FR) to use. 'FR1' for FR1, or 'FR2' for FR2.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#band">band</a></code></td>
+    <td><span>String with used band for simulation. In TDD mode it is important to set correctly a band from the next list: n257, n258, n260, n261.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#tdd">tdd</a></code></td>
+    <td><span>Boolean indicating if the cell operates in TDD mode.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#buf">buf</a></code></td>
+    <td><span>Integer with the maximum Bytes the UE Bearer buffer can tolerate before dropping packets.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#schedulerInter">schedulerInter</a></code></td>
+    <td><span>String indicating the Inter Slice Scheduler to use. For only one Slice simulations use ''. If the simulation includes more than one slice, set '' for Round Robin, 'RRp' for Round Robin Plus, or 'PFXY' for Proportional Fair with X=numExp and Y=denExp.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#t_sim">t_sim</a></code></td>
+    <td><span>Simulation duration in milliseconds.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#debMode">debMode</a></code></td>
+    <td><span>Boolean indicating if debugging mode is active. In that case, an html log file will be generated with schedulers operation. Note that in simulations with a high number of UEs this file can turn quite heavy.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#measInterv">measInterv</a></code></td>
+    <td><span>Time interval (in milliseconds) between meassures for statistics reports.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#interSliceSchGr">interSliceSchGr</a></code></td>
+    <td><span>Inter slice scheduler time granularity in milliseconds.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#env">env</a></code></td>
+    <td><span>Environment instance needed by simpy for runing PEM methods</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#cell1">cell1</a></code></td>
+    <td><span>Cell instance for running the simulation</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#UEgroup2">UEgroup2</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#UEgroup1">UEgroup1</a></code></td>
+    <td><span>Group of users with defined traffic profile, capabilities and service requirements for which the sumulation will run.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#UEgroups">UEgroups</a></code></td>
+    <td><span>UE group list for the configured simulation</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#procCell">procCell</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#procInter">procInter</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.bw">
+    
+  </a>
+  <a name="bw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">bw</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>List containing each CC's bandwidth for the simulation.</p></div> (type: <code>list[int]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.fr">
+    
+  </a>
+  <a name="fr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">fr</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>String with frequency range (FR) to use. 'FR1' for FR1, or 'FR2' for FR2.</p></div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.band">
+    
+  </a>
+  <a name="band">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">band</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>String with used band for simulation. In TDD mode it is important to set correctly a band from the next list: n257, n258, n260, n261.</p></div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.tdd">
+    
+  </a>
+  <a name="tdd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tdd</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Boolean indicating if the cell operates in TDD mode.</p></div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.buf">
+    
+  </a>
+  <a name="buf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">buf</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Integer with the maximum Bytes the UE Bearer buffer can tolerate before dropping packets.</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.schedulerInter">
+    
+  </a>
+  <a name="schedulerInter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">schedulerInter</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>String indicating the Inter Slice Scheduler to use. For only one Slice simulations use ''. If the simulation includes more than one slice, set '' for Round Robin, 'RRp' for Round Robin Plus, or 'PFXY' for Proportional Fair with X=numExp and Y=denExp.</p></div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.t_sim">
+    
+  </a>
+  <a name="t_sim">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">t_sim</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Simulation duration in milliseconds.</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.debMode">
+    
+  </a>
+  <a name="debMode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">debMode</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Boolean indicating if debugging mode is active. In that case, an html log file will be generated with schedulers operation. Note that in simulations with a high number of UEs this file can turn quite heavy.</p></div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.measInterv">
+    
+  </a>
+  <a name="measInterv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">measInterv</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Time interval (in milliseconds) between meassures for statistics reports.</p></div> (type: <code>float</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.interSliceSchGr">
+    
+  </a>
+  <a name="interSliceSchGr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">interSliceSchGr</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Inter slice scheduler time granularity in milliseconds.</p></div> (type: <code>float</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.env">
+    
+  </a>
+  <a name="env">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">env</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Environment instance needed by simpy for runing PEM methods</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.cell1">
+    
+  </a>
+  <a name="cell1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">cell1</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Cell instance for running the simulation</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.UEgroup2">
+    
+  </a>
+  <a name="UEgroup2">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">UEgroup2</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.UEgroup1">
+    
+  </a>
+  <a name="UEgroup1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">UEgroup1</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Group of users with defined traffic profile, capabilities and service requirements for which the sumulation will run.</p><p>More than one can be instantiated in one simulation. For each one of them, the UEgroup instance must be added in the UEgroups list.</p><p>UEgroupN = UEgroup(nuDL,nuUL,pszDL,pszUL,parrDL,parrUL,label,dly,avlty,schedulerType,mimo_mode,layers,cell,hdr,t_sim,measInterv,env,sinr):</p><p>label: must contain substring according to the type of service: eMBB, mMTC, URLLC</p><p>schedulerType: RR: Rounf Robin, PF: Proportional Fair (10, 11)</p><p>mimo_mode: SU, MU</p><p>layers: in SU-MIMO is the number of layers/UE, in MU-MIMO is the number of simultaneous UE to serve with the same resources</p><p>sinr: is a string starting starting with S if all ues have the same sinr or D if not. The value next will be the initial sinr of each ue or the maximum.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.UEgroups">
+    
+  </a>
+  <a name="UEgroups">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">UEgroups</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>UE group list for the configured simulation</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.procCell">
+    
+  </a>
+  <a name="procCell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">procCell</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Py5cheSim.simulation.procInter">
+    
+  </a>
+  <a name="procInter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">procInter</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

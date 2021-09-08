@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.Scheds_Intra.PF_Scheduler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.Scheds_Intra.html">Scheds_Intra</a></code>.<code><a href="Py5cheSim.Scheds_Intra.PF_Scheduler.html">PF_Scheduler</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">PF_Scheduler</span>(<span title="IntraSliceSch.IntraSliceScheduler">IntraSliceScheduler</span>):</code></p>
+        <p><a href="classIndex.html#Py5cheSim.Scheds_Intra.PF_Scheduler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This class implements Proportional Fair intra slice scheduling algorithm.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id19">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#promLen">promLen</a></code></td>
+    <td><span>Past Throughput average length considered in PF metric</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#resAlloc">resAlloc</a></code></td>
+    <td><span>This method implements Proportional Fair resource allocation between the different connected UEs. This method overwrites the resAlloc method from IntraSliceScheduler class.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setUEfactor">setUEfactor</a></code></td>
+    <td><span>This method sets the PF metric for each UE</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#findMaxFactor">findMaxFactor</a></code></td>
+    <td><span>This method finds and returns the UE with the highest metric</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#printResAlloc">printResAlloc</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Intra.PF_Scheduler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, ba, n, debMd, sLod, ttiByms, mmd_, ly_, dir, Smb, robustMCS, slcLbl, sch):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Scheds_Intra.PF_Scheduler.promLen">
+    
+  </a>
+  <a name="promLen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">promLen</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>Past Throughput average length considered in PF metric</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Intra.PF_Scheduler.resAlloc">
+    
+  </a>
+  <a name="resAlloc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">resAlloc</span>(self, band):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method implements Proportional Fair resource allocation between the different connected UEs. This method overwrites the resAlloc method from IntraSliceScheduler class.</p><p>Proportional Fair scheduler allocates all PRBs in the slice to the UE with the biggest metric. Metric for each UE is calculated as PossibleUEtbs/AveragePastTbs.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Intra.PF_Scheduler.setUEfactor">
+    
+  </a>
+  <a name="setUEfactor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setUEfactor</span>(self, exp_n, exp_d):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method sets the PF metric for each UE</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Intra.PF_Scheduler.findMaxFactor">
+    
+  </a>
+  <a name="findMaxFactor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">findMaxFactor</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method finds and returns the UE with the highest metric</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Intra.PF_Scheduler.printResAlloc">
+    
+  </a>
+  <a name="printResAlloc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">printResAlloc</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.IntraSliceSch.LTE_scheduler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.IntraSliceSch.html">IntraSliceSch</a></code>.<code><a href="Py5cheSim.IntraSliceSch.LTE_scheduler.html">LTE_scheduler</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">LTE_scheduler</span>(<a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html" title="Py5cheSim.IntraSliceSch.IntraSliceScheduler">IntraSliceScheduler</a>):</code></p>
+        <p><a href="classIndex.html#Py5cheSim.IntraSliceSch.LTE_scheduler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>Basic intra slice LTE scheduler. It implements Round Robin algorithm for scheduling in a LTE Slice.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id8">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#BER">BER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#modTable">modTable</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tbsTable">tbsTable</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#cqiTable">cqiTable</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#blerTable">blerTable</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#loadModTable">loadModTable</a></code></td>
+    <td><span>3GPP TS 36.213 7.1.7.1-1 merged with MCS table presented in R1-081483.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#loadTbsTable">loadTbsTable</a></code></td>
+    <td><span>TBS table 7.1.7.2.1-1 from 3GPP TS 36.213</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#loadCqiTable">loadCqiTable</a></code></td>
+    <td><span>CQI table 7.2.3-1 from 3GPP TS 36.213</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#loadBlerTable">loadBlerTable</a></code></td>
+    <td><span>BLER tables obtained from runing simulations with the reference simulation tool.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setMod">setMod</a></code></td>
+    <td><span>This method calculates spectral efficiency for the UE SINR and configured BER, and obtains CQI, MCS, and TBS</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setCQI">setCQI</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#findMCS">findMCS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setBLER">setBLER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html">IntraSliceScheduler</a></code>:
+          </p>
+          <table class="children sortable" id="id9">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#band">band</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#PRBs">PRBs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#schType">schType</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#queue">queue</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#ues">ues</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#sinrModTable">sinrModTable</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#ind_u">ind_u</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#nrbUEmax">nrbUEmax</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#sbFrNum">sbFrNum</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#dbMd">dbMd</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#rets">rets</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#sLoad">sLoad</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#ueLst">ueLst</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#ttiByms">ttiByms</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#mimomd">mimomd</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#nlayers">nlayers</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#direction">direction</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#TDDsmb">TDDsmb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#robustMCS">robustMCS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#tdd">tdd</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#sliceLabel">sliceLabel</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#dbFile">dbFile</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#loadSINR_MCStable">loadSINR_MCStable</a></code></td>
+    <td><span>MCS-SINR allocation table</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#queuesOut">queuesOut</a></code></td>
+    <td><span>This method manages the scheduler TB queue. This is a PEM method.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#findPackBeQ">findPackBeQ</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#queueUpdate">queueUpdate</a></code></td>
+    <td><span>This method fills scheduler TB queue at each TTI with TBs built with UE data/signalling bytes.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#rb_lim">rb_lim</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#rrcUncstSigIn">rrcUncstSigIn</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#updIndUE">updIndUE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#updSumPcks">updSumPcks</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#dataPtoTB">dataPtoTB</a></code></td>
+    <td><span>This method takes UE data bytes, builds TB and puts them in the scheduler TB queue.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#retransmitTB">retransmitTB</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#resAlloc">resAlloc</a></code></td>
+    <td><span>This method allocates cell PRBs to the different connected UEs.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#setTBS">setTBS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#insertTB">insertTB</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#printQstate">printQstate</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#printQue">printQue</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#printQtb">printQtb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#printPendTB">printPendTB</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#printDebData">printDebData</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#printDebDataDM">printDebDataDM</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#printResAlloc">printResAlloc</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, ba, n, debMd, sLod, mmd_, ly_, dir):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#__init__">Py5cheSim.IntraSliceSch.IntraSliceScheduler.__init__</a></code></div>
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.BER">
+    
+  </a>
+  <a name="BER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">BER</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>float</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.modTable">
+    
+  </a>
+  <a name="modTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">modTable</span> =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#modTable">Py5cheSim.IntraSliceSch.IntraSliceScheduler.modTable</a></code></div>
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>list</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.tbsTable">
+    
+  </a>
+  <a name="tbsTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tbsTable</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>list</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.cqiTable">
+    
+  </a>
+  <a name="cqiTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">cqiTable</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>list</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.blerTable">
+    
+  </a>
+  <a name="blerTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">blerTable</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div> (type: <code>dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.loadModTable">
+    
+  </a>
+  <a name="loadModTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">loadModTable</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#loadModTable">Py5cheSim.IntraSliceSch.IntraSliceScheduler.loadModTable</a></code></div>
+    
+    <div><p>3GPP TS 36.213 7.1.7.1-1 merged with MCS table presented in R1-081483.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.loadTbsTable">
+    
+  </a>
+  <a name="loadTbsTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">loadTbsTable</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>TBS table 7.1.7.2.1-1 from 3GPP TS 36.213</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.loadCqiTable">
+    
+  </a>
+  <a name="loadCqiTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">loadCqiTable</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>CQI table 7.2.3-1 from 3GPP TS 36.213</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.loadBlerTable">
+    
+  </a>
+  <a name="loadBlerTable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">loadBlerTable</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>BLER tables obtained from runing simulations with the reference simulation tool.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.setMod">
+    
+  </a>
+  <a name="setMod">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setMod</span>(self, u, nprb):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#setMod">Py5cheSim.IntraSliceSch.IntraSliceScheduler.setMod</a></code></div>
+    
+    <div><p>This method calculates spectral efficiency for the UE SINR and configured BER, and obtains CQI, MCS, and TBS</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.setCQI">
+    
+  </a>
+  <a name="setCQI">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setCQI</span>(self, sp_eff):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.findMCS">
+    
+  </a>
+  <a name="findMCS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">findMCS</span>(self, e):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#findMCS">Py5cheSim.IntraSliceSch.IntraSliceScheduler.findMCS</a></code></div>
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.IntraSliceSch.LTE_scheduler.setBLER">
+    
+  </a>
+  <a name="setBLER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setBLER</span>(self, u):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="Py5cheSim.IntraSliceSch.IntraSliceScheduler.html#setBLER">Py5cheSim.IntraSliceSch.IntraSliceScheduler.setBLER</a></code></div>
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

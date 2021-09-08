@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Py5cheSim.Scheds_Inter.PF_Scheduler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header navbar-brand">
+          Py5cheSim
+          <a href="index.html">API Documentation</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><code><a href="Py5cheSim.html">Py5cheSim</a></code>.<code><a href="Py5cheSim.Scheds_Inter.html">Scheds_Inter</a></code>.<code><a href="Py5cheSim.Scheds_Inter.PF_Scheduler.html">PF_Scheduler</a></code></code></h1>
+        <div id="showPrivate">
+          <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+        </div>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> <span class="py-defname">PF_Scheduler</span>(<span title="InterSliceSch.InterSliceScheduler">InterSliceScheduler</span>):</code></p>
+        <p><a href="classIndex.html#Py5cheSim.Scheds_Inter.PF_Scheduler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>This class implements Proportional Fair inter slice scheduling algorithm.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id17">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#sch">sch</a></code></td>
+    <td><span>String formatted as PFXY, with X=numerator exponent for metric formula, and Y=denominator exponent.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#rcvdBytesLen">rcvdBytesLen</a></code></td>
+    <td><span>rcvdBytes list length in Slice instance. No more that rcvdBytesLen values are stored.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#resAlloc">resAlloc</a></code></td>
+    <td><span>This method implements Proportional Fair resource allocation between the different configured slices. This PEM method overwrites the resAlloc method from InterSliceScheduler class.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setMetric">setMetric</a></code></td>
+    <td><span>This method sets the PF metric for each slice</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#findMaxMetSlice">findMaxMetSlice</a></code></td>
+    <td><span>This method finds and returns the Slice with the highest metric</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#assign2aSlice">assign2aSlice</a></code></td>
+    <td><span>This method allocates cell's PRBs to the indicated slice</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#printSliceConfig">printSliceConfig</a></code></td>
+    <td><span>This method stores inter slice scheduling debugging information on the log file, adding PF metric values.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, ba, fr, dm, tdd, gr, sch):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.sch">
+    
+  </a>
+  <a name="sch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">sch</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>String formatted as PFXY, with X=numerator exponent for metric formula, and Y=denominator exponent.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.rcvdBytesLen">
+    
+  </a>
+  <a name="rcvdBytesLen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">rcvdBytesLen</span> =
+    
+  </div>
+  <div class="functionBody">
+    
+    
+    <div><p>rcvdBytes list length in Slice instance. No more that rcvdBytesLen values are stored.</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.resAlloc">
+    
+  </a>
+  <a name="resAlloc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">resAlloc</span>(self, env):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method implements Proportional Fair resource allocation between the different configured slices. This PEM method overwrites the resAlloc method from InterSliceScheduler class.</p><p>Proportional Fair scheduler allocates all PRBs in the cell to the slice with the biggest metric. Metric for each slice is calculated as PossibleAverageUEtbs/ReceivedBytes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.setMetric">
+    
+  </a>
+  <a name="setMetric">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setMetric</span>(self, exp_n, exp_d):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method sets the PF metric for each slice</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.findMaxMetSlice">
+    
+  </a>
+  <a name="findMaxMetSlice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">findMaxMetSlice</span>(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method finds and returns the Slice with the highest metric</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.assign2aSlice">
+    
+  </a>
+  <a name="assign2aSlice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">assign2aSlice</span>(self, slice):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method allocates cell's PRBs to the indicated slice</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Py5cheSim.Scheds_Inter.PF_Scheduler.printSliceConfig">
+    
+  </a>
+  <a name="printSliceConfig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">printSliceConfig</span>(self, slice):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>This method stores inter slice scheduling debugging information on the log file, adding PF metric values.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Py5cheSim, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 21.2.2 at 2021-09-05 13:11:47.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
