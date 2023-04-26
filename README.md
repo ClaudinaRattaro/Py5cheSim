@@ -21,6 +21,13 @@ Py5cheSim is build on the next modules:<br/>
 • Results.py: Provides auxiliary methods to present simulation results, and configure traffic profiles.<br/>
 
 Py5cheSim 1.0 is the result of the Master Thesis of Gabriela Pereyra (Facultad de Ingeniería, UdelaR).
+Thesis: Pereyra, G. (2021.). Scheduling in 5G networks : Developing a 5G cell capacity simulator. Tesis de maestría. Universidad de la República (Uruguay). Facultad de Ingeniería.
+Article: https://hdl.handle.net/20.500.12008/30549
 
 Code Documentation: https://htmlpreview.github.io/?https://github.com/ClaudinaRattaro/Py5cheSim/blob/main/doc/Py5cheSim.html
 
+
+In https://github.com/linglesloggia/py5chesim is the improved version of the simulator (version 2 )
+it is related to article: https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/31723/1/PIRB22.pdf
+
+In https://github.com/charluy/PFC we have integrated the framework deepmimo (https://deepmimo.net/) as an input of py5chesim (improving the channel model and mimo feature)
